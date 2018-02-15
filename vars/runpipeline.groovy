@@ -3,12 +3,12 @@ def call (String name = 'human') {
     node {
 		def mvnHome
 		stage('Preparation') { // for display purposes
-		    workspace ='C:\My Data\Jenkins\workspace\Java-Projects\'
+		    String workspace ='C:\My Data\Jenkins\workspace\Java-Projects\'
 	        echo "Workspace location is .... ${workspace}\simple-java-maven-app"
 			echo "Triggered by, ${name}."
 			// Get some code from a GitHub repository
-			//git 'https://github.com/eskarthi/simple-java-maven-app.git'
-			cd "${workspace}\simple-java-maven-app"
+			git 'https://github.com/eskarthi/simple-java-maven-app.git'
+			//cd "${workspace}\simple-java-maven-app"
 			// Get the Maven tool.
 			// ** NOTE: This maven tool configured
 			// **       in the global configuration.           
