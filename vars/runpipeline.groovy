@@ -5,7 +5,13 @@ def call (String name = 'human') {
 				mvnHome = tool 'Maven3.5.2'
 		}	
 		 // Scripted Pipeline
-    	echo "Triggered by, ${name}."
-		
-	}
+		stages {
+        stage('Even Stage') {
+          steps {
+            echo "The build number is ...."
+			echo "Triggered by, ${name}."
+          }
+        }
+      }
+    }
 }
