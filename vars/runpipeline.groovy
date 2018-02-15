@@ -1,5 +1,5 @@
 def call (String name = 'human') {
-	def  mvnHome = tool 'Maven3.5.2'
+	def  mvnHome = 'C:\Tools\apache-maven-3.5.2'
     node {
           stage ('Build') {
             echo "The build number is ...."
