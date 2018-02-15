@@ -5,7 +5,7 @@ def call (String name = 'human') {
 		def mvnHome
 		stage('Preparation') { // for display purposes
 		// Get some code from a GitHub repository
-		git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+		git 'https://github.com/eskarthi/simple-java-maven-app.git'
 		// Get the Maven tool.
 		// ** NOTE: This maven tool configured
 		// **       in the global configuration.           

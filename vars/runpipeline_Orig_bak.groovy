@@ -1,5 +1,4 @@
-def call () {
-	pipeline {
+pipeline {
 		agent any
 		environment { // global settings
 				mvnHome = tool 'Maven3.5.2'
@@ -24,4 +23,3 @@ def call () {
 			}
 		}
 	}
-}
