@@ -15,17 +15,14 @@ def call (String name = 'human') {
         
 		stage ('Build') {
     		bat(/"${mvnHome}\bin\mvn" -B -DskipTests clean package/)
-          }
+        }
 		
 		stage('Test') {
-				steps {
-					bat(/"${mvnHome}\bin\mvn" test/)
-				}
-				post {
-					always {
-					   junit '**/target/surefire-reports/*.xml'
-					}
-				}
-			}
+			bat(/"${mvnHome}\bin\mvn" test/)
+		}
+		stage ('close') {
+			junit '**/target/surefire-reports/*.xml'
+		}
+			
         }
 }
