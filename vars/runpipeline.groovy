@@ -1,10 +1,11 @@
 def call (String name = 'human') {
 	pipeline {
+		agent any
 		 // Scripted Pipeline
     		echo "Triggered by, ${name}."
 		environment { // global settings
 				mvnHome = tool 'Maven3.5.2'
-			}	
+		}	
 		
 		stages {
 			 
