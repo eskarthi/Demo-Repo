@@ -1,4 +1,4 @@
-def call (string name) {
+def call (String name = 'human') {
 	pipeline {
 		 // Scripted Pipeline
     		echo "Triggered by, ${name}."
