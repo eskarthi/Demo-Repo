@@ -3,7 +3,7 @@ def call (String name = 'human') {
     node {
 		def mvnHome
 		stage('Preparation') { // for display purposes
-		    workspace ="C:\My Data\Jenkins\workspace\Java-Projects\"
+		    workspace ='C:\My Data\Jenkins\workspace\Java-Projects\'
 	        echo "Workspace location is .... ${workspace}\simple-java-maven-app"
 			echo "Triggered by, ${name}."
 			// Get some code from a GitHub repository
