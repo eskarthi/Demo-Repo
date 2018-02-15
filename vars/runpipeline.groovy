@@ -1,12 +1,8 @@
 def call (String name = 'human') {
-
-        stage('Build') {
-          steps {
+        node {
+          stage ('build') {
             echo "The build number is ...."
 			echo "Triggered by, ${name}."
           }
         }
-	
-      
-    
 }
