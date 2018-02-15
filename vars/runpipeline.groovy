@@ -6,22 +6,6 @@ def call (String name = 'human') {
 		}	
 		 // Scripted Pipeline
     	echo "Triggered by, ${name}."
-		stages {
-			stage('Build') {
-				steps {
-					bat(/"${mvnHome}\bin\mvn" -B -DskipTests clean package/)
-				}
-			}
-			stage('Test') {
-				steps {
-					bat(/"${mvnHome}\bin\mvn" test/)
-				}
-				post {
-					always {
-					   junit '**/target/surefire-reports/*.xml'
-					}
-				}
-			}
-		}
+		
 	}
 }
