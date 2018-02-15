@@ -1,7 +1,5 @@
 def call (String name = 'human') {
-	pipeline {
-		agent any
-		 // Scripted Pipeline
+
 		stages {
         stage('Even Stage') {
           steps {
@@ -10,5 +8,5 @@ def call (String name = 'human') {
           }
         }
       }
-    }
+    
 }
