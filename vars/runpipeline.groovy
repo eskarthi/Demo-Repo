@@ -7,8 +7,8 @@ def call (String name = 'human') {
 	        echo "Workspace location is .... ${workspace}\simple-java-maven-app"
 			echo "Triggered by, ${name}."
 			// Get some code from a GitHub repository
-			//git 'https://github.com/eskarthi/simple-java-maven-app.git'
-			cd "${workspace}\simple-java-maven-app"
+			git 'https://github.com/eskarthi/simple-java-maven-app.git'
+			//cd "${workspace}\simple-java-maven-app"
 			// Get the Maven tool.
 			// ** NOTE: This maven tool configured
 			// **       in the global configuration.           
