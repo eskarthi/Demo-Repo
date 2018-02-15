@@ -1,4 +1,5 @@
 def call (String name = 'human') {
+	def mvnHome
 	environment { // global settings
                  mvnHome = tool 'Maven3.5.2'
                 }
