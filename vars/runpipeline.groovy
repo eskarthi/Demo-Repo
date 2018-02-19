@@ -13,7 +13,7 @@ def call(body) {
 				try {
 					stage ('Preparation') {
 						//checkout scm
-						echo "Triggered by, ${name}."
+						echo "Triggered by, ${config.user}"
 						// Get some code from a GitHub repository
 						git 'https://github.com/eskarthi/simple-java-maven-app.git'
 	
