@@ -5,6 +5,9 @@ def call(body) {
 			body.delegate = config
 			body()
 	
+			pipeline {
+				agent any
+			
 			node {
 				def mvnHome
 				// Clean workspace before doing anything
@@ -44,6 +47,7 @@ def call(body) {
 					currentBuild.result = 'FAILED'
 					throw err
 				}
+			}
 			}
 		}
 
