@@ -5,8 +5,6 @@ def call(body) {
 	body.delegate = config
 	body()
 
-	pipeline {
-		agent any
 
 		node {
 			def mvnHome
@@ -48,6 +46,6 @@ def call(body) {
 				throw err
 			}
 		}
-	}
+	
 }
 
