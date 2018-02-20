@@ -1,3 +1,6 @@
+import com.cicd.practice
+import com.cicd.practice.Utilities
+
 def call(body) {
 
 	def config = [:]
@@ -8,6 +11,7 @@ def call(body) {
 
 	node {
 		def mvnHome
+		def demo_utils = new Utilities()
 		// Clean workspace before doing anything
 		//deleteDir()
 
@@ -15,8 +19,9 @@ def call(body) {
 			stage ('Preparation') {
 				//checkout scm
 				echo "Triggered by, ${config.user}"
-				// Get some code from a GitHub repository
-				git 'https://github.com/eskarthi/simple-java-maven-app.git'
+			
+				demo_utils.checkOutFrom("${config.projectName}")
+				//simple-java-maven-app
 
 				mvnHome = tool 'Maven3.5.2'
 			}
