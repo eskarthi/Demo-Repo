@@ -1,6 +1,3 @@
-import com.cicd.practice
-import com.cicd.practice.Utilities
-
 def call(body) {
 
 	def config = [:]
@@ -11,7 +8,7 @@ def call(body) {
 
 	node {
 		def mvnHome
-		def demo_utils = new Utilities()
+		def demo_utils = new com.cicd.practice.Utilities()
 		// Clean workspace before doing anything
 		//deleteDir()
 
